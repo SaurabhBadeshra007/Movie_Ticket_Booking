@@ -66,7 +66,7 @@ let pvr = [{
     b: [8, 5],
     a: [],
     price: [800, 800, 560, 560, 560, 560, 450, 450],
-    date: 29,
+    date: new Date().getDate(),
     img: 'tabah.png',
     video: 'trailer.mp4'
 },
@@ -88,7 +88,7 @@ let pvr = [{
     b: [8, 5, 12, 13, 14],
     a: [],
     price: [800, 800, 560, 560, 560, 560, 450, 450],
-    date: 29,
+    date: new Date().getDate(),
     img: 'gadar2.png',
     video: 'gadar2_trailer.mp4'
 
@@ -111,7 +111,7 @@ let pvr = [{
     b: [8, 5],
     a: [12, 17],
     price: [800, 800, 560, 560, 560, 560, 450, 450],
-    date: 30,
+    date: new Date().getDate(),
     img: 'tabah.png',
     video: 'trailer.mp4'
 },
@@ -133,7 +133,7 @@ let pvr = [{
     b: [8, 5, 12, 13, 14],
     a: [5, 8, 7, 13],
     price: [800, 800, 560, 560, 560, 560, 450, 450],
-    date: 30,
+   date: new Date().getDate(),
     img: 'gadar2.png',
     video: 'gadar2_trailer.mp4'
 
@@ -308,7 +308,7 @@ document.getElementById('book_ticket').addEventListener('click', () => {
         tic.innerHTML = `  <div class="barcode">
                         <div class="card">
                             <h6>ROW ${seat_sr.toUpperCase()}</h6>
-                            <h6>${main_date} June 2025</h6>
+                            <h6>${main_date} ${new Date().toLocaleString('en-US', { month: 'short' })} ${new Date().getFullYear()}</h6>
                         </div> 
                         <div class="card">
                             <h6>Seat ${seat_no}</h6>
